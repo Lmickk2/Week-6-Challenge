@@ -1,0 +1,38 @@
+.header {
+    background-color: rgb(0, 140, 255);
+    width: 100%;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.guide {
+    text-align: center;
+    color:white;
+}
+
+.container {
+    text-align: center;
+}
+
+.search {
+    padding-top: 10px;
+    padding-left: 12px;
+}
+
+input {
+    padding-top: 5px;
+    font-size: 18px;
+}
+
+.submit {
+    background-color: rgb(74, 147, 231);
+    color: white;
+}
+
+.card p {
+    font-size: 18px;
+}

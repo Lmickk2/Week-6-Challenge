@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-​
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">​
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./assets/style.css"/>
-  ​  <title>Weather Forecast Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-​
 <body>
-  <header class="container">
-    <h1>Weather Forecast Dashboard</h1>
-  </header>
-​
-  <div class="container-fluid">
-    <div class="row">
-      <div class="Search">
-        <h3 class="city-search">Search for a City:</h3>
-        <div class="form-inline form-group">
-          <input class="form-control" type="text" id="search-value"/>
-          <button class="btn btn-city" id="search-button">Search!</button>
-        </div>
-        <ul class="prev-search"></ul>
+  <div class="main">
+    <div class="header">
+      <h1>Weather Dashboard</h1>
+      <p class="guide">Enter a city to view the current weather in that area.</p>
     </div>
+  
+    <div class="input">
+      <input type="text" placeholder="Enter any city" class="input_text">
+      <input type="submit" value="Search" class="submit">
+    </div>
+
+    <div class="container">
+        <div class="card">
+          <h1 class="city-name" id="city-name"></h1>
+          <p class="temp"></p>
+        </div>
+      </div>
   </div>
-​
-<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="./assets/scripts.js"></script>
+<script src="scripts.js"></script>
 </body>
 </html>

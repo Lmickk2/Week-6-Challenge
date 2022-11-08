@@ -29,3 +29,29 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=i
 })
 })
 
+button.addEventListener('click', function(getWeather){
+  fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=imperial&appid=1ead17aedc87d3e9e1d77265edf736ed')
+  .then(response => response.json())
+  .then(data => {
+
+    var tempValue = data['main']['temp']
+
+    var windValue = data['main']['wind_speed']
+  
+    var humidValue = data['main']['humidity']
+  
+    var daily = data['main']['daily'];
+  
+    var nameValue = data['name'];
+
+    for(i=0; i<5; i++) {
+      var newDay = document.querySelector('.day' + (i+1)).innerHTML = "Temp- "+tempValue+ "°";
+    
+    }
+
+    for(i=0; i<5; i++) {
+      var newDay = document.querySelector('.humid' + (i+1)).innerHTML = "Humidity:  "+humidValue+ "%";
+    
+    }
+  })
+})

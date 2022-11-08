@@ -12,11 +12,14 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=i
 .then(response => response.json())
 .then(data => {
   var tempValue = data['main']['temp']
+
   var windValue = data['main']['wind_speed']
+
   var humidValue = data['main']['humidity']
+
   var daily = data['main']['daily'];
+
   var nameValue = data['name'];
-  var descValue = data['weather'][0]['description'];
 
   main.innerHTML = nameValue;
   temp.innerHTML = "Temp - "+tempValue;

@@ -13,7 +13,7 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=i
 .then(data => {
   var tempValue = data['main']['temp']
 
-  var windValue = data['main']['wind_speed']
+  var windValue = data['wind']['speed']
 
   var humidValue = data['main']['humidity']
 
@@ -22,8 +22,8 @@ fetch('https://api.openweathermap.org/data/2.5/weather?q='+input.value+'&units=i
   var nameValue = data['name'];
 
   main.innerHTML = nameValue;
-  temp.innerHTML = "Temp - "+tempValue;
-  wind.innerHTML = "Wind: "+windValue;
+  temp.innerHTML = "Temp - "+tempValue +"°";
+  wind.innerHTML = "Wind Speed: "+windValue + " MPH";
   humidity.innerHTML = "Humidity: "+humidValue + "%";
 
 })
@@ -36,7 +36,7 @@ button.addEventListener('click', function(getWeather){
 
     var tempValue = data['main']['temp']
 
-    var windValue = data['main']['wind_speed']
+    var windValue = data['wind']['speed']
   
     var humidValue = data['main']['humidity']
   
@@ -45,7 +45,12 @@ button.addEventListener('click', function(getWeather){
     var nameValue = data['name'];
 
     for(i=0; i<5; i++) {
-      var newDay = document.querySelector('.day' + (i+1)).innerHTML = "Temp- "+tempValue+ "°";
+      var newDay = document.querySelector('.day' + (i+1)).innerHTML = "Temp- "+tempValue +"°";
+    
+    }
+
+    for(i=0; i<5; i++) {
+      var newDay = document.querySelector('.wind' + (i+1)).innerHTML = "Wind Speed:  "+windValue+ "MPH";
     
     }
 
